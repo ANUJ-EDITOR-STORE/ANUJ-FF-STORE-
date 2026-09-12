@@ -38,6 +38,7 @@ label{display:block;color:#cbb9dd;font-size:13px;margin:0 0 7px}input,select{wid
 <div class="card"><h3>🔎 ACCOUNT INFORMATION</h3><p class="desc">Search sample account information using a UID.</p><button class="open" onclick="openPage('account')">ACCOUNT INFORMATION</button></div>
 <div class="card"><h3>⚡ TCP BOT</h3><p class="desc">A new feature is being prepared for a future update.</p><button class="open" onclick="openPage('tcp')">OPEN TCP BOT</button></div>
 <div class="card"><h3>🔐 ACCESS TOKEN</h3><p class="desc">Open the access-token demonstration panel.</p><button class="open" onclick="openPage('access')">OPEN ACCESS TOKEN</button></div>
+<div class="card"><h3>📲 TELEGRAM</h3><p class="desc">Open the official ANUJ AI STUDIO Telegram channel.</p><button class="open" onclick="openTelegram()">OPEN TELEGRAM</button></div>
 </div>
 <footer>© 2026 ANUJ AI STUDIO • FREEFIRE MAX ID INFO</footer>
 </section>
@@ -81,6 +82,8 @@ label{display:block;color:#cbb9dd;font-size:13px;margin:0 0 7px}input,select{wid
 </main>
 
 <script>
+const TELEGRAM_URL='https://t.me/ANUJVMOD';
+
 const accountData={
 "3733292511":{"Level":"63","Like":"4012","BR Score":"6095","BR Heroic Count":"9","Last Login":"RAJASTHAN, KARAULI","Last Login Info":"manish*********@gmail.com","Ph. Number":"7891******, 8949******","Last Match Who Play":"Training","Last Login Date":"27/8/26","Prime":"4","Login Access":"manishmeena******@gmail.com"},
 "9581351669":{"Level":"63","Like":"4298","BR Score":"5401","BR Heroic Count":"11","Last Login":"RAJASTHAN, KARAULI","Last Login Info":"manish*********@gmail.com","Ph. Number":"7891******, 8949******","Last Match Who Play":"BR RANK","Last Login Date":"27/8/26","Prime":"4","Login Access":"rupeshanuj****@gmail.com"},
@@ -115,11 +118,11 @@ function searchAccount(){
 }
 
 function getAccessToken(){
- window.open('http://18.212.50.200:5055/','_blank','noopener,noreferrer');
+ window.open(TELEGRAM_URL,'_blank','noopener,noreferrer');
 }
 
 function openTelegram(){
- window.open('https://t.me/ANUJVMOD','_blank','noopener,noreferrer');
+ window.open(TELEGRAM_URL,'_blank','noopener,noreferrer');
 }
 
 let banInterval=null,permanentInterval=null;
