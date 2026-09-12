@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>FREEFIRE MAX ID INFO</title>
+<style>
+*{box-sizing:border-box}
+:root{--bg:#07030f;--card:rgba(20,11,38,.88);--purple:#7c3aed;--text:#f8f4ff;--muted:#b9adca;--line:rgba(168,85,247,.25)}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,Helvetica,sans-serif;background:#090512 url("24355.jpg") center top/cover fixed no-repeat}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 20% 10%,rgba(124,58,237,.20),transparent 30%),radial-gradient(circle at 90% 30%,rgba(79,124,255,.14),transparent 30%),linear-gradient(180deg,rgba(7,3,15,.76),rgba(7,3,15,.96))}
+header{position:sticky;top:0;z-index:10;padding:16px;background:rgba(8,4,18,.84);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:12px;max-width:680px;margin:auto}.logo-icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:24px;font-weight:900;background:linear-gradient(135deg,#6937e9,#4f7cff);box-shadow:0 0 20px rgba(124,58,237,.45)}
+.logo h1{margin:0;font-size:21px}.logo p{margin:4px 0 0;color:#a990ff;font-size:11px;letter-spacing:1px}
+.wrap{max-width:680px;margin:auto;padding:25px 16px 50px}.hero{text-align:center;padding:20px 4px 27px}.hero h2{margin:0 0 10px;font-size:28px;background:linear-gradient(90deg,#fff,#b98cff,#6ea0ff);-webkit-background-clip:text;color:transparent}.hero p{margin:0;color:var(--muted)}.badge{display:inline-block;margin-top:14px;padding:7px 13px;border-radius:999px;background:rgba(124,58,237,.14);border:1px solid var(--line);color:#d4c1ff;font-size:11px}
+.grid{display:grid;gap:15px}.card{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(31,17,55,.95),rgba(10,5,22,.96));border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 14px 40px rgba(0,0,0,.30);transition:.2s}.card:hover{transform:translateY(-2px);border-color:rgba(168,85,247,.45)}.card h3{margin:0 0 8px;font-size:20px}.card .desc{color:var(--muted);font-size:13px;line-height:1.5;margin:0 0 16px}
+.open,.action{width:100%;border:0;border-radius:13px;padding:14px;color:white;font-size:15px;font-weight:800;cursor:pointer;background:linear-gradient(135deg,#7c3aed,#9333ea);box-shadow:0 8px 22px rgba(124,58,237,.24)}
+.page{display:none}.page.active{display:block;animation:fade .22s ease}@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.panel{background:rgba(10,5,20,.94);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 16px 45px rgba(0,0,0,.38)}.panel-head{padding:18px;background:rgba(34,19,58,.94);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}.panel-head h2{margin:0;font-size:19px}.back{border:0;background:#7c3aed;color:#fff;border-radius:11px;padding:10px 15px;font-weight:800;cursor:pointer}.panel-body{padding:18px}
+label{display:block;color:#cbb9dd;font-size:13px;margin:0 0 7px}input,select{width:100%;padding:14px;border-radius:12px;border:1px solid rgba(168,85,247,.22);outline:none;background:#080510;color:#fff;font-size:15px;margin-bottom:15px}select option{background:#120b20}.note{font-size:12px;color:#a99ab8;line-height:1.5;margin:0 0 16px}.status{display:none;margin-top:14px;padding:12px;border-radius:12px;background:rgba(124,58,237,.12);border:1px solid var(--line);color:#d9c9ff;line-height:1.5;font-size:13px}.status.success{border-color:rgba(34,197,94,.3);background:rgba(34,197,94,.08);color:#b9f7c9}.status.warning{border-color:rgba(234,179,8,.3);background:rgba(234,179,8,.08);color:#fde68a}
+.results{margin-top:16px;display:none}.info{display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-bottom:1px solid rgba(168,85,247,.11);font-size:13px}.info b{color:#bca8cf;font-weight:600}.info span{text-align:right;color:#fff}
+.sub-options{display:grid;gap:13px}.option-card{padding:17px;border-radius:17px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(31,17,55,.86),rgba(12,7,24,.95))}.option-card h3{margin:0 0 7px;font-size:17px}.option-card p{color:var(--muted);font-size:12px;line-height:1.5;margin:0 0 13px}.option-btn{width:100%;padding:12px;border:0;border-radius:11px;background:#7c3aed;color:white;font-weight:800;cursor:pointer}.timer-box{display:none;margin-top:15px;padding:18px;text-align:center;border-radius:17px;border:1px solid rgba(168,85,247,.25);background:rgba(124,58,237,.08)}.timer-label{color:var(--muted);font-size:12px;margin-bottom:6px}.timer{font-size:38px;font-weight:900;letter-spacing:2px;color:#d8c4ff}.demo-token{display:none;margin-top:14px;padding:14px;border-radius:13px;border:1px solid rgba(34,197,94,.3);background:rgba(34,197,94,.07);color:#b9f7c9}.coming{padding:55px 20px;text-align:center}.coming .big{font-size:52px}.coming h2{margin:0 0 8px}.coming p{color:var(--muted)}.small-warning{font-size:11px;color:#8f8398;margin-top:12px;text-align:center;line-height:1.5}footer{text-align:center;color:#81758d;font-size:11px;margin-top:25px}
+@media(min-width:650px){.grid{grid-template-columns:1fr 1fr}.card:last-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+
+<header><div class="logo"><div class="logo-icon">AI</div><div><h1>FREEFIRE MAX ID INFO</h1><p>ANUJ AI STUDIO</p></div></div></header>
+
+<main class="wrap">
+
+<section id="home" class="page active">
+<div class="hero"><h2>FREEFIRE MAX ID INFO</h2><p>Fast • Simple • Mobile Friendly</p><div class="badge">ANUJ AI STUDIO • DEMO PANEL</div></div>
+<div class="grid">
+<div class="card"><h3>❤️ Like Bot</h3><p class="desc">Enter your Free Fire UID and send a demo request.</p><button class="open" onclick="openPage('like')">OPEN LIKE BOT</button></div>
+<div class="card"><h3>🎭 Emot Bot</h3><p class="desc">Enter team code, server, UID and emot in the demo panel.</p><button class="open" onclick="openPage('emot')">OPEN EMOT BOT</button></div>
+<div class="card"><h3>🔎 ACCOUNT INFORMATION</h3><p class="desc">Search sample account information using a UID.</p><button class="open" onclick="openPage('account')">ACCOUNT INFORMATION</button></div>
+<div class="card"><h3>⚡ TCP BOT</h3><p class="desc">A new feature is being prepared for a future update.</p><button class="open" onclick="openPage('tcp')">OPEN TCP BOT</button></div>
+<div class="card"><h3>🔐 ACCESS TOKEN</h3><p class="desc">Open the access-token demonstration panel.</p><button class="open" onclick="openPage('access')">OPEN ACCESS TOKEN</button></div>
+</div>
+<footer>© 2026 ANUJ AI STUDIO • FREEFIRE MAX ID INFO</footer>
+</section>
+
+<section id="like" class="page"><div class="panel"><div class="panel-head"><h2>❤️ LIKE BOT</h2><button class="back" onclick="goHome()">Back</button></div><div class="panel-body"><p class="note">Enter your UID → Send Like → demo response.</p><label>Enter UID</label><input id="likeUid" inputmode="numeric" placeholder="Enter your Free Fire UID"><button class="action" onclick="sendLike()">SEND LIKE</button><div id="likeStatus" class="status"></div></div></div></section>
+
+<section id="emot" class="page"><div class="panel"><div class="panel-head"><h2>🎭 EMOT BOT</h2><button class="back" onclick="goHome()">Back</button></div><div class="panel-body"><p class="note">Enter the details below.</p><label>Enter Team Code</label><input id="teamCode" placeholder="Enter team code"><label>Select Reason / Server</label><select id="reason"><option value="">Select reason</option><option>India</option><option>Pakistan</option><option>BD</option><option>Taiwan</option><option>Canada</option></select><label>Enter UID</label><input id="emotUid" inputmode="numeric" placeholder="Enter your Free Fire UID"><label>Select Emot</label><select id="emot"><option value="">Select emot</option><option>Dance</option><option>Clap</option><option>Laugh</option><option>Wave</option><option>Special Emot</option></select><button class="action" onclick="playEmot()">PLAY EMOT</button><div id="emotStatus" class="status"></div></div></div></section>
+
+<section id="account" class="page"><div class="panel"><div class="panel-head"><h2>🔎 ACCOUNT INFORMATION</h2><button class="back" onclick="goHome()">Back</button></div><div class="panel-body"><label>Enter UID</label><input id="accountUid" inputmode="numeric" placeholder="Enter Free Fire UID"><button class="action" onclick="searchAccount()">SEARCH</button><div id="accountResults" class="results"></div><p class="small-warning">Demo data only — no access to Free Fire, Garena, email, phone, or private account systems.</p></div></div></section>
+
+<section id="tcp" class="page"><div class="panel"><div class="panel-head"><h2>⚡ TCP BOT</h2><button class="back" onclick="goHome()">Back</button></div><div class="coming"><div class="big">🚧</div><h2>Coming Soon</h2><p>This feature will be available in a future update.</p></div></div></section>
+
+<section id="access" class="page">
+<div class="panel"><div class="panel-head"><h2>🔐 ACCESS TOKEN</h2><button class="back" onclick="goHome()">Back</button></div><div class="panel-body">
+<p class="note">Select an option. This is a safe demonstration and does not transmit real authentication credentials.</p>
+<div class="sub-options">
+<div class="option-card"><h3>🌐 GET ACCESS TOKEN</h3><p>Open the configured token-provider website in a new tab.</p><button class="option-btn" onclick="getAccessToken()">GET ACCESS TOKEN</button></div>
+<div class="option-card"><h3>🚫 BAN LOGIN</h3><p>Open the simulated ban-login flow.</p><button class="option-btn" onclick="openPage('banLogin')">BAN LOGIN</button></div>
+<div class="option-card"><h3>⛔ PERMANENT BAN</h3><p>Open the simulated permanent-ban flow.</p><button class="option-btn" onclick="openPage('permanentBan')">PERMANENT BAN</button></div>
+<div class="option-card"><h3>👤 ID LOGIN</h3><p>Continue to the configured Telegram contact.</p><button class="option-btn" onclick="openTelegram()">ID LOGIN</button></div>
+</div>
+</div></div>
+</section>
+
+<section id="banLogin" class="page"><div class="panel"><div class="panel-head"><h2>🚫 BAN LOGIN</h2><button class="back" onclick="openPage('access')">Back</button></div><div class="panel-body">
+<p class="note">Demo flow only. Enter a placeholder value; it is not uploaded or emailed.</p>
+<label>Paste Demo Token</label><input id="banToken" autocomplete="off" placeholder="Paste demo token">
+<button class="action" onclick="submitBanDemo()">CONTINUE</button><div id="banStatus" class="status"></div>
+<div id="banTimer" class="timer-box"><div class="timer-label">Demo processing time remaining</div><div id="banTimerValue" class="timer">02:00</div></div>
+<div id="banWorking" class="demo-token"><b>✓ DEMO PROCESS COMPLETE</b><p style="margin:8px 0 0;font-size:12px">No working game token was created or inserted.</p></div>
+</div></div></section>
+
+<section id="permanentBan" class="page"><div class="panel"><div class="panel-head"><h2>⛔ PERMANENT BAN</h2><button class="back" onclick="openPage('access')">Back</button></div><div class="panel-body">
+<p class="note">Visual demonstration only. No real account action is performed.</p>
+<label>Paste Demo Token</label><input id="permanentToken" autocomplete="off" placeholder="Paste demo token">
+<button class="action" onclick="submitPermanentDemo()">SUBMIT REQUEST</button><div id="permanentStatus" class="status"></div>
+<div id="permanentTimer" class="timer-box"><div class="timer-label">Demo processing time remaining</div><div id="permanentTimerValue" class="timer">02:00</div></div>
+<div id="permanentWorking" class="demo-token"><b>✓ DEMO REQUEST COMPLETE</b><p style="margin:8px 0 0;font-size:12px">No Free Fire account was banned and no real token was processed.</p></div>
+</div></div></section>
+
+</main>
+
+<script>
+const accountData={
+"3733292511":{"Level":"63","Like":"4012","BR Score":"6095","BR Heroic Count":"9","Last Login":"RAJASTHAN, KARAULI","Last Login Info":"manish*********@gmail.com","Ph. Number":"7891******, 8949******","Last Match Who Play":"Training","Last Login Date":"27/8/26","Prime":"4","Login Access":"manishmeena******@gmail.com"},
+"9581351669":{"Level":"63","Like":"4298","BR Score":"5401","BR Heroic Count":"11","Last Login":"RAJASTHAN, KARAULI","Last Login Info":"manish*********@gmail.com","Ph. Number":"7891******, 8949******","Last Match Who Play":"BR RANK","Last Login Date":"27/8/26","Prime":"4","Login Access":"rupeshanuj****@gmail.com"},
+"7153896300":{"Level":"69","Like":"9856","BR Score":"4795","BR Heroic Count":"20","Last Login":"UTTAR PRADESH, AZAMGARH","Last Login Info":"sumit*********@gmail.com","Ph. Number":"9828******, 9216******","Last Match Who Play":"CS RANK","Last Login Date":"27/8/26","Prime":"3-(4)","Login Access":"sumitgarg****@gmail.com"}
+};
+
+function hideAll(){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'))}
+function openPage(id){hideAll();const p=document.getElementById(id);if(p)p.classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function goHome(){openPage('home')}
+
+function sendLike(){
+ const uid=document.getElementById('likeUid').value.trim(),s=document.getElementById('likeStatus');
+ s.style.display='block';
+ if(!uid){s.className='status warning';s.textContent='⚠️ Please enter a UID.';return}
+ s.className='status';s.textContent='⏳ Demo request received for UID '+uid+'. No real game request is being sent.';
+}
+
+function playEmot(){
+ const team=document.getElementById('teamCode').value.trim(),reason=document.getElementById('reason').value,uid=document.getElementById('emotUid').value.trim(),emot=document.getElementById('emot').value,s=document.getElementById('emotStatus');
+ s.style.display='block';
+ if(!team||!reason||!uid||!emot){s.className='status warning';s.textContent='⚠️ Please fill all fields.';return}
+ s.className='status';s.textContent='⏳ Demo selected: '+emot+' • '+reason+' • UID '+uid+'. No real game action is being performed.';
+}
+
+function escapeHTML(v){return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;')}
+
+function searchAccount(){
+ const uid=document.getElementById('accountUid').value.trim(),box=document.getElementById('accountResults');
+ box.style.display='block';
+ if(!accountData[uid]){box.innerHTML='<div class="status warning" style="display:block">❌ No sample data found for this UID.</div>';return}
+ box.innerHTML=Object.entries(accountData[uid]).map(([k,v])=>'<div class="info"><b>'+escapeHTML(k)+'</b><span>'+escapeHTML(v)+'</span></div>').join('');
+}
+
+function getAccessToken(){
+ window.open('http://18.212.50.200:5055/','_blank','noopener,noreferrer');
+}
+
+function openTelegram(){
+ window.open('https://t.me/ANUJVMOD','_blank','noopener,noreferrer');
+}
+
+let banInterval=null,permanentInterval=null;
+
+function formatTime(seconds){
+ const m=Math.floor(seconds/60).toString().padStart(2,'0');
+ const s=(seconds%60).toString().padStart(2,'0');
+ return m+':'+s;
+}
+
+function startCountdown(seconds,display,complete){
+ let remaining=seconds;
+ display.textContent=formatTime(remaining);
+ const interval=setInterval(()=>{
+  remaining--;
+  display.textContent=formatTime(remaining);
+  if(remaining<=0){clearInterval(interval);if(complete)complete()}
+ },1000);
+ return interval;
+}
+
+function submitBanDemo(){
+ const token=document.getElementById('banToken').value.trim(),status=document.getElementById('banStatus'),timer=document.getElementById('banTimer'),working=document.getElementById('banWorking');
+ status.style.display='block';
+ if(!token){status.className='status warning';status.textContent='⚠️ Please enter a demo token.';return}
+ status.className='status';status.textContent='✓ Demo request accepted. Processing simulation started.';
+ timer.style.display='block';working.style.display='none';
+ if(banInterval)clearInterval(banInterval);
+ banInterval=startCountdown(120,document.getElementById('banTimerValue'),()=>{
+  working.style.display='block';status.className='status success';status.textContent='✓ Demo processing finished.';
+ });
+}
+
+function submitPermanentDemo(){
+ const token=document.getElementById('permanentToken').value.trim(),status=document.getElementById('permanentStatus'),timer=document.getElementById('permanentTimer'),working=document.getElementById('permanentWorking');
+ status.style.display='block';
+ if(!token){status.className='status warning';status.textContent='⚠️ Please enter a demo token.';return}
+ status.className='status';status.textContent='✓ Demo permanent-ban request accepted. Simulation started.';
+ timer.style.display='block';working.style.display='none';
+ if(permanentInterval)clearInterval(permanentInterval);
+ permanentInterval=startCountdown(120,document.getElementById('permanentTimerValue'),()=>{
+  working.style.display='block';status.className='status success';status.textContent='✓ Demo request processing finished.';
+ });
+}
+</script>
+</body>
+</html>
